@@ -1,5 +1,5 @@
 window.APP_CONFIG = {
-  brand: { name: '福岡銀行', short: 'ふくぎん', accent: '#c8102e' },
+  brand: { name: '福岡銀行', short: 'ふくぎん', accent: '#00A7EA', secondary: '#7D6B55', logo: 'fukuoka-bank-logo.svg' },
   member: { name: '山田 花子', account: '普通預金  1234567', balance: 1286540, accountMasked: '天神支店 · 123****' },
   loan: { name: 'カードローン', borrowed: 420000, limit: 1000000, dueDate: '2026年11月27日', dueAmount: 12000 },
   services: [
