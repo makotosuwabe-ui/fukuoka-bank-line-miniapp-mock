@@ -11,7 +11,7 @@
   function go(page, serviceId) { state.history.push({page:state.page,service:state.service}); state.page=page; if(serviceId) state.service=serviceId; render(); }
   function back() { const last=state.history.pop(); if(last){state.page=last.page;state.service=last.service}else{state.page='home'} render(); }
   function nav(page) { state.history=[]; state.page=page;state.service=null;render(); }
-  const header = () => `<header class="top"><div class="logo"><span class="logo-mark">F</span><span>${cfg.brand.name}</span></div><div class="top-right">LINEミニアプリ</div></header>`;
+  const header = () => `<header class="top"><div class="logo"><img src="fukuoka-bank-logo.svg" alt="${esc(cfg.brand.name)}"></div><div class="top-right">LINEミニアプリ</div></header>`;
   const bottom = () => `<nav class="bottom" aria-label="メインメニュー">${[['home','⌂','ホーム'],['services','▦','サービス'],['applications','▤','申込履歴'],['mypage','◉','マイページ']].map(([id,ic,label])=>`<button class="nav-item ${state.page===id?'active':''}" data-nav="${id}"><span class="nav-icon">${ic}</span>${label}</button>`).join('')}</nav>`;
   const step = n => `<div class="steps" aria-label="ステップ ${n} / 3">${[1,2,3].map(i=>`<i class="${i<=n?'on':''}"></i>`).join('')}</div>`;
   const backButton = () => `<button class="back" data-back>‹　戻る</button>`;
